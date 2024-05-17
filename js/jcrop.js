@@ -15,8 +15,14 @@ $(document).ready(function() {
                 var width = img.width;
                 var height = img.height;
                 if (width > 256 || height > 256) {
+                    var ratio = width / height;
+                    if (ratio > 1) {
                         width = 256;
+                        height = Math.round(width / ratio);
+                    } else {
                         height = 256;
+                        width = Math.round(height * ratio);
+                    }
                 }
                 canvas = document.createElement('canvas');
                 canvas.width = width;
@@ -55,7 +61,7 @@ $(document).ready(function() {
             var scaleY = image.height / $('#uploadedImage').height();
             
             // Calcular las coordenadas para dibujar la imagen recortada en el centro del lienzo
-            var centerX = ((canvas.width - coords.w * scaleX) / 2) - 5;
+            var centerX = ((canvas.width - coords.w * scaleX) / 2) - 10;
             var centerY = (canvas.height - coords.h * scaleY) / 2;
             
             // Dibujar la imagen escalada en el centro del lienzo
