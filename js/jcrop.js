@@ -12,6 +12,16 @@ $(document).ready(function() {
         reader.onload = function(e) {
             var img = new Image();
             img.onload = function() {
+                if (width > 400 || height > 400) {
+                    var ratio = width / height;
+                    if (ratio > 1) {
+                        width = 400;
+                        height = Math.round(width / ratio);
+                    } else {
+                        height = 400;
+                        width = Math.round(height * ratio);
+                    }
+                }
                 var width = img.width;
                 var height = img.height;
                 canvas = document.createElement('canvas');
