@@ -55,8 +55,13 @@ $(document).ready(function() {
             canvas.width = 512;
             canvas.height = 512;
             ctx.clearRect(0, 0, canvas.width, canvas.height);
-            // Dibujar la imagen seleccionada en el lienzo con las coordenadas y dimensiones correctas
-            ctx.drawImage(image, coords.x, coords.y, coords.w, coords.h, 0, 0, canvas.width, canvas.height);
+            
+            // Calcular el factor de escala para ajustar la imagen seleccionada al área de recorte
+            var scaleX = image.width / $('#uploadedImage').width();
+            var scaleY = image.height / $('#uploadedImage').height();
+            
+            // Dibujar la imagen escalada en el lienzo
+            ctx.drawImage(image, coords.x * scaleX, coords.y * scaleY, coords.w * scaleX, coords.h * scaleY, 0, 0, canvas.width, canvas.height);
             image.setAttribute('crossorigin', 'anonymous');
     
             // Superponer la imagen uniforme
