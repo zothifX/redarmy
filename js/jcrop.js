@@ -52,8 +52,8 @@ $(document).ready(function() {
         ctx = canvas.getContext('2d');
         var image = new Image();
         image.onload = function() {
-            //canvas.width = coords.w;
-            //canvas.height = coords.h;
+            canvas.width = 200;
+            canvas.height = 200;
             ctx.clearRect(0, 0, canvas.width, canvas.height);
             ctx.drawImage(image, coords.x, coords.y, coords.w, coords.h, 0, 0, coords.w, coords.h);
             image.setAttribute('crossorigin', 'anonymous');
