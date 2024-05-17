@@ -17,10 +17,10 @@ $(document).ready(function() {
                 if (width > 380 || height > 380) {
                     var ratio = width / height;
                     if (ratio > 1) {
-                        width = 380;
+                        width = 240;
                         height = Math.round(width / ratio);
                     } else {
-                        height = 380;
+                        height = 240;
                         width = Math.round(height * ratio);
                     }
                 }
