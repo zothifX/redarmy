@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>RED</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-jcrop/0.9.15/css/jquery.Jcrop.min.css">
+</head>
+<body id="page-top">
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+        <div class="container px-4">
+            <a class="navbar-brand" href="#page-top">Romanian Elite Division</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Achievements</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Uniform</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Header-->
+    <header class="bg-primary bg-gradient text-white">
+        <div class="container px-4 text-center">
+            <h1 class="fw-bolder">Welcome to the RED website!</h1>
+            <p class="lead">The best of the best of eRomania</p>
+            <a class="btn btn-lg btn-light" href="https://www.edominacy.com/en/military-unit/17">Join us here!</a>
+        </div>
+    </header>
+    <!-- About section-->
+    <section id="about">
+        <div class="container px-4">
+            <div class="row gx-4 justify-content-center">
+                <div class="col-lg-8">
+                    <h2>About our Military Unit</h2>
+                    <p class="lead">Welcome to the Romanian Elite Division, where honor and patriotism drive our mission. Formerly known as the Romanian Army, we made the strategic decision to transform our military unit into the Romanian Elite Division, gathering the elite fighters of eRomania under one banner. As a formidable force in the game, we are dedicated to defending Romanian interests with unwavering courage and loyalty. Our motto, "Honor et Patria" (Honor and Fatherland), reflects our commitment to upholding the highest standards of honor while safeguarding our beloved homeland. Join us today and become part of a family of dedicated players united in our quest for excellence, camaraderie, and victory.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Achievements section-->
+    <section class="bg-light" id="services">
+        <div class="container px-4">
+            <div class="row gx-4 justify-content-center">
+                <div class="col-lg-8">
+                    <h2>Our achievements</h2>
+                    <div class="container">
+                        <div id="achievementsCarousel" class="carousel slide" data-ride="carousel">
+                          <div class="carousel-inner">
+                            <div class="carousel-item active">
+                              <img src="images/readarmy1.png" class="d-block w-100" alt="Achievement 1">
+                              <div class="carousel-caption d-none d-md-block">
+                                <h5>League Wars</h5>
+                                <p>Our unit played a crucial role in securing victory in the League Wars on day 50 against Germany.</p>
+                              </div>
+                            </div>
+                            <!-- Add more carousel items as needed -->
+                          </div>
+                          <a class="carousel-control-prev" href="#achievementsCarousel" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                          </a>
+                          <a class="carousel-control-next" href="#achievementsCarousel" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                          </a>
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Contact section-->
+    <section id="contact">
+        <div class="container px-4">
+            <div class="row gx-4 justify-content-center">
+                <div class="col-lg-8">
+                    <h2>Make yourself an uniform!</h2>
+                    <p class="lead">Upload an image and select the desired area of the image to be embedded in the uniform.</p>
+                    <input type="file" id="imageUpload" accept="image/*">
+                    <div class= "py-4" id="imageWrapper" style="display: none;">
+                        <img src="#" alt="Uploaded Image" id="uploadedImage">
+                    </div>
+                    <div class= "pb-4" id="overlayWrapper" style="display: none;">
+                        <h3 class= "pb-3">Selected Area to Overlay:</h3>
+                        <canvas id="overlayCanvas"></canvas>
+                    </div class= align-center>
+                    <button id="downloadButton" style="display: none;">Download Image</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer-->
+    <footer class="py-5 bg-dark">
+        <div class="container px-4"><p class="m-0 text-center text-white">Copyright &copy; Romanian Elite Division 2024</p></div>
+    </footer>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-jcrop/0.9.15/js/jquery.Jcrop.min.js"></script>
+    <script src="js/jcrop.js"></script>
+</body>
+</html>

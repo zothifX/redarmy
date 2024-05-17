@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Overlay with jCrop</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-jcrop/0.9.15/css/jquery.Jcrop.min.css">
+</head>
+<body>
+
+  <div class="container">
+    <h2>Upload an Image and Overlay</h2>
+    <input type="file" id="imageUpload" accept="image/*">
+    <div id="imageWrapper" style="display: none;">
+      <img src="#" alt="Uploaded Image" id="uploadedImage">
+    </div>
+    <div id="overlayWrapper" style="display: none;">
+      <h3>Select Area to Overlay:</h3>
+      <canvas id="overlayCanvas"></canvas>
+    </div>
+    <button id="downloadButton" style="display: none;">Download Image</button>
+    <input type="file" id="overlayUpload" accept="image/*" style="display: none;">
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-jcrop/0.9.15/js/jquery.Jcrop.min.js"></script>
+  <script src="js/scripts.js"></script>
+  <script src="js/jcrop.js"></script>
+</body>
+</html>
