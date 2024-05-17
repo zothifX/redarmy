@@ -12,6 +12,8 @@ $(document).ready(function() {
         reader.onload = function(e) {
             var img = new Image();
             img.onload = function() {
+                var width = img.width;
+                var height = img.height;
                 canvas = document.createElement('canvas');
                 canvas.width = width;
                 canvas.height = height;
