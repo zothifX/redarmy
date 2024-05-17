@@ -14,6 +14,16 @@ $(document).ready(function() {
             img.onload = function() {
                 var width = img.width;
                 var height = img.height;
+                if (width > 200 || height > 200) {
+                    var ratio = width / height;
+                    if (ratio > 1) {
+                        width = 200;
+                        height = Math.round(width / ratio);
+                    } else {
+                        height = 200;
+                        width = Math.round(height * ratio);
+                    }
+                }
                 canvas = document.createElement('canvas');
                 canvas.width = width;
                 canvas.height = height;
@@ -50,8 +60,12 @@ $(document).ready(function() {
             var scaleX = image.width / $('#uploadedImage').width();
             var scaleY = image.height / $('#uploadedImage').height();
             
-            // Dibujar la imagen escalada en el lienzo
-            ctx.drawImage(image, coords.x * scaleX, coords.y * scaleY, coords.w * scaleX, coords.h * scaleY, 0, 0, canvas.width, canvas.height);
+            // Calcular las coordenadas para dibujar la imagen recortada en el centro del lienzo
+            var centerX = (canvas.width - coords.w * scaleX) / 2;
+            var centerY = (canvas.height - coords.h * scaleY) / 2;
+            
+            // Dibujar la imagen escalada en el centro del lienzo
+            ctx.drawImage(image, coords.x * scaleX, coords.y * scaleY, coords.w * scaleX, coords.h * scaleY, centerX, centerY, coords.w * scaleX, coords.h * scaleY);
             image.setAttribute('crossorigin', 'anonymous');
     
             // Superponer la imagen uniforme
