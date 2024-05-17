@@ -17,6 +17,16 @@ $(document).ready(function() {
                 canvas = document.createElement('canvas');
                 canvas.width = width;
                 canvas.height = height;
+                if (width > 512 || height > 512) {
+                    var ratio = width / height;
+                    if (ratio > 1) {
+                        width = 512;
+                        height = Math.round(width / ratio);
+                    } else {
+                        height = 512;
+                        width = Math.round(height * ratio);
+                    }
+                }
                 ctx = canvas.getContext('2d');
                 ctx.drawImage(img, 0, 0, width, height);
                 $('#uploadedImage').attr('src', canvas.toDataURL());
@@ -42,8 +52,8 @@ $(document).ready(function() {
         ctx = canvas.getContext('2d');
         var image = new Image();
         image.onload = function() {
-            canvas.width = 200;
-            canvas.height = 200;
+            canvas.width = 512;
+            canvas.height = 512;
             ctx.clearRect(0, 0, canvas.width, canvas.height);
             ctx.drawImage(image, coords.x, coords.y, coords.w, coords.h, 0, 0, coords.w, coords.h);
             image.setAttribute('crossorigin', 'anonymous');
