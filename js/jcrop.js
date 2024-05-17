@@ -55,9 +55,10 @@ $(document).ready(function() {
             canvas.width = 512;
             canvas.height = 512;
             ctx.clearRect(0, 0, canvas.width, canvas.height);
-            ctx.drawImage(image, coords.x, coords.y, coords.w, coords.h, 0, 0, coords.w, coords.h);
+            // Dibujar la imagen seleccionada en el lienzo con las coordenadas y dimensiones correctas
+            ctx.drawImage(image, coords.x, coords.y, coords.w, coords.h, 0, 0, canvas.width, canvas.height);
             image.setAttribute('crossorigin', 'anonymous');
-
+    
             // Superponer la imagen uniforme
             var uniforme = new Image();
             uniforme.onload = function() {
