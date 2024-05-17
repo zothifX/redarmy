@@ -14,9 +14,6 @@ $(document).ready(function() {
             img.onload = function() {
                 var width = img.width;
                 var height = img.height;
-                canvas = document.createElement('canvas');
-                canvas.width = width;
-                canvas.height = height;
                 if (width > 512 || height > 512) {
                     var ratio = width / height;
                     if (ratio > 1) {
@@ -27,6 +24,9 @@ $(document).ready(function() {
                         width = Math.round(height * ratio);
                     }
                 }
+                canvas = document.createElement('canvas');
+                canvas.width = width;
+                canvas.height = height;
                 ctx = canvas.getContext('2d');
                 ctx.drawImage(img, 0, 0, width, height);
                 $('#uploadedImage').attr('src', canvas.toDataURL());
