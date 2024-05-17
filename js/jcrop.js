@@ -42,7 +42,7 @@ $(document).ready(function() {
 
     function initializeJCrop() {
         $('#uploadedImage').Jcrop({
-            aspectRatio: 1, // Set the aspect ratio to 1:1 for square selection
+            // aspectRatio: 1, // Set the aspect ratio to 1:1 for square selection
             onSelect: updateOverlay // Call updateOverlay function when selection is made
         });
     }
