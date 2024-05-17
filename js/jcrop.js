@@ -15,14 +15,8 @@ $(document).ready(function() {
                 var width = img.width;
                 var height = img.height;
                 if (width > 256 || height > 256) {
-                    var ratio = width / height;
-                    if (ratio > 1) {
                         width = 256;
-                        height = Math.round(width / ratio);
-                    } else {
                         height = 256;
-                        width = Math.round(height * ratio);
-                    }
                 }
                 canvas = document.createElement('canvas');
                 canvas.width = width;
