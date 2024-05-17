@@ -14,13 +14,13 @@ $(document).ready(function() {
             img.onload = function() {
                 var width = img.width;
                 var height = img.height;
-                if (width > 450 || height > 450) {
+                if (width > 380 || height > 380) {
                     var ratio = width / height;
                     if (ratio > 1) {
-                        width = 450;
+                        width = 380;
                         height = Math.round(width / ratio);
                     } else {
-                        height = 450;
+                        height = 380;
                         width = Math.round(height * ratio);
                     }
                 }
