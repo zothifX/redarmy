@@ -12,18 +12,6 @@ $(document).ready(function() {
         reader.onload = function(e) {
             var img = new Image();
             img.onload = function() {
-                var width = img.width;
-                var height = img.height;
-                if (width > 512 || height > 512) {
-                    var ratio = width / height;
-                    if (ratio > 1) {
-                        width = 512;
-                        height = Math.round(width / ratio);
-                    } else {
-                        height = 512;
-                        width = Math.round(height * ratio);
-                    }
-                }
                 canvas = document.createElement('canvas');
                 canvas.width = width;
                 canvas.height = height;
