@@ -42,7 +42,7 @@ $(document).ready(function() {
 
     function initializeJCrop() {
         $('#uploadedImage').Jcrop({
-            // aspectRatio: 1, // Set the aspect ratio to 1:1 for square selection
+            aspectRatio: 1, // Set the aspect ratio to 1:1 for square selection
             onSelect: updateOverlay // Call updateOverlay function when selection is made
         });
     }
@@ -52,8 +52,8 @@ $(document).ready(function() {
         ctx = canvas.getContext('2d');
         var image = new Image();
         image.onload = function() {
-            canvas.width = coords.w;
-            canvas.height = coords.h;
+            //canvas.width = coords.w;
+            //canvas.height = coords.h;
             ctx.clearRect(0, 0, canvas.width, canvas.height);
             ctx.drawImage(image, coords.x, coords.y, coords.w, coords.h, 0, 0, coords.w, coords.h);
             image.setAttribute('crossorigin', 'anonymous');
