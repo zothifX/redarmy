@@ -61,7 +61,7 @@ $(document).ready(function() {
             var scaleY = image.height / $('#uploadedImage').height();
             
             // Calcular las coordenadas para dibujar la imagen recortada en el centro del lienzo
-            var centerX = ((canvas.width - coords.w * scaleX) / 2) - 9;
+            var centerX = ((canvas.width - coords.w * scaleX) / 2) - 8;
             var centerY = (canvas.height - coords.h * scaleY) / 2;
             
             // Dibujar la imagen escalada en el centro del lienzo
