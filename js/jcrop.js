@@ -12,6 +12,8 @@ $(document).ready(function() {
         reader.onload = function(e) {
             var img = new Image();
             img.onload = function() {
+                var width = img.width;
+                var height = img.height;
                 if (width > 400 || height > 400) {
                     var ratio = width / height;
                     if (ratio > 1) {
@@ -22,8 +24,6 @@ $(document).ready(function() {
                         width = Math.round(height * ratio);
                     }
                 }
-                var width = img.width;
-                var height = img.height;
                 canvas = document.createElement('canvas');
                 canvas.width = width;
                 canvas.height = height;
