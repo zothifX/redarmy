@@ -486,6 +486,10 @@ progress {
   display: none !important;
 }
 
+.backgroundrom {
+  background-image: url('./images/romania');
+}
+
 .lead {
   font-size: 1.25rem;
   font-weight: 300;
